@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#! /home/thatguysilver/py_projects/django_projects/venv/bin/python3
+
 import os
 import sys
 
