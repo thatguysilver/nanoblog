@@ -1,8 +1,10 @@
 <head>
-  <h1>{{ post }}</h1>
+  <h1>Nanoblogga</h1>
 
 </head>
 
 <body>
-  {{ testvar }}
+  {% for i in post %}
+  <li>{{ i }}</li>
+  {% endfor %}
 </body>
