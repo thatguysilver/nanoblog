@@ -1,0 +1,11 @@
+<head>
+  <h1>{{ Post.objects.filter(id=1)}}</h1>
+
+</head>
+
+<body>
+  {{ testvar }}
+  {% for i in post.content.objects.all %}
+  <li>{{ post.content }}</li>
+  {% endfor %}
+</body>
