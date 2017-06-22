@@ -4,4 +4,5 @@ from django.http import HttpResponse
 from .models import Post
 
 def post(request):
-    return HttpResponse(r"It's working . . . sorta.")
+    testvar = "TEST VARIABLE PLZ IGNORE"
+    return render(request, 'posts/main.html')
