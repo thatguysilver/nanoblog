@@ -5,4 +5,4 @@ from .models import Post
 
 def post(request):
     testvar = "TEST VARIABLE PLZ IGNORE"
-    return render(request, 'posts/main.html')
+    return render(request, 'posts/main.html', {'testvar': testvar})
