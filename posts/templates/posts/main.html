@@ -1,8 +1,11 @@
 <head>
-  <h1>Test of main.html, working . . . .</h1>
+  <h1>{{ post }}</h1>
 
 </head>
 
 <body>
   {{ testvar }}
+  {% for i in post.content.objects.all %}
+  <li>{{ post.content }}</li>
+  {% endfor %}
 </body>
