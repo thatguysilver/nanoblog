@@ -1,11 +1,12 @@
 <head>
-  <h1>Nanoblogga</h1>
+  <h2>What I've learned since 23 June, 2017</h2>
 
 </head>
 
 <body>
-  {% for i in post %}
-  <li>{{ i }}</li>
+  
+  {% for i in post reversed  %}
+  <li>{{ i }} -- {{ i.pub_date }}</li>
   {% endfor %}
   
 
