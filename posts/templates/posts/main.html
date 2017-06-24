@@ -1,23 +1,51 @@
 <head>
 <style>
+#overrides {
+  padding-left: 10px;
+}
 li{
   margin: 10px 0;
 }
+
 </style>
-  <p>to-do:</p>
-  {% for i in to_do_list %}
-  <li>{{ i }}</li>
-  {% endfor %}
-  <h2>What I've learned since 23 June, 2017</h2>
+{% load static %}
+<img src = '{% static 'posts/mypic.JPG' %}' alt = '?'/>
+<div class = 'container-fluid'>
+  <div style class = 'row'>
+    <div 'col-md-2'>
+    </div>
+    <div 'col-md-4'>
+
+      <p>to-do:</p>
+      {% for i in to_do_list %}
+      <li>{{ i }}</li>
+      {% endfor %}
+      <h2>What I've learned since 23 June, 2017</h2>
+    </div>
+  </div>
+</div>
   
 
 </head>
 
 <body>
-  
-  {% for i in post reversed  %}
-  <li>{{ i }} -- {{ i.pub_date }}</li>
-  {% endfor %}
-  
+  <div class = 'container-fluid'>
+    <div class = 'row'>
+      <div class = 'col-sm-4'>
+      {% for i in post reversed  %}
+      <li>{{ i }} -- {{ i.pub_date }}</li>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
 
 </body>
