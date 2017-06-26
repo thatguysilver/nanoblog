@@ -16,25 +16,25 @@
 #overrides {
   padding-left: 10px;
 }
+h1,
+h2,
+h3{
+  font-family: 'Nova Mono', Arial, sans-serif;
+}
 li{
-  font-family: 'Nova Mono', Arial, sans-serif; 
+ 
   margin: 10px 0;
 }
 
 </style>
 {% load static %}
 <img src = '{% static 'posts/mypic.JPG' %}' alt = '?'/>
-<div class = 'container-fluid'>
+<div class = 'container'>
   <div style class = 'row'>
-    <div 'col-md-2'>
-    </div>
-    <div 'col-md-4'>
+    <div 'col-sm-4'>
 
-      <p>to-do:</p>
-      {% for i in to_do_list %}
-      <li>{{ i }}</li>
-      {% endfor %}
-      <h2>What I've learned since 23 June, 2017</h2>
+      
+      <h1>What I've learned since 23 June, 2017</h1>
     </div>
   </div>
 </div>
@@ -43,13 +43,20 @@ li{
 </head>
 
 <body>
-  <div class = 'container-fluid'>
+  <div class = 'container'>
     <div class = 'row'>
       <div class = 'col-sm-4'>
       {% for i in post reversed  %}
       <li>{{ i }} -- {{ i.pub_date }}</li>
       {% endfor %}
       </div>
+      <div class = 'col-sm-7 pull-right'>
+        <h3>to-do:</h3>
+      {% for i in to_do_list %}
+        <li>{{ i }}</li>
+      {% endfor %}
+        </div>
+
     </div>
   </div>
 
