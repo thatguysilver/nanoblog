@@ -28,10 +28,20 @@ li{
 
 </style>
 {% load static %}
-<a href = 'https://github.com/thatguysilver'>
-    <img style = 'max-width: 60; padding-left: 10px; padding-top: 10px;' 
-    src = '{% static 'posts/GitHub-Mark-64px.png' %}' alt = '?'/>
-</a>
+<div class = 'row'>
+  <div class = 'col-sm-1'>
+    <a href = 'https://github.com/thatguysilver'>
+        <img class='pull-right' style = 'max-width: 60; padding-left: 10px; padding-top: 10px;' 
+        src = '{% static 'GitHub-Mark-32px.png' %}' alt = '?'/>
+    </a>
+  </div>
+  <div class = 'col-sm-1'>
+    <a href = 'https://www.linkedin.com/in/adampaulsilver/'>
+      <img class = 'pull-left' style = 'max-width: 60;  padding-top: 10px;' 
+      src = '{% static 'posts/linkedin.png' %}' alt = '?'/>
+    </a>
+  </div>
+</div>
 <div class = 'container'>
   <div class = 'row'>
     <div 'col-sm-4'>
