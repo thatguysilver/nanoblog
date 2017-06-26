@@ -1,7 +1,7 @@
 <head>
 
 
-  <link href='https://fonts.googleapis.com/css?family=Nova+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Muli|Nova+Mono' rel='stylesheet' type='text/css'>
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,7 +22,7 @@ h3{
   font-family: 'Nova Mono', Arial, sans-serif;
 }
 li{
- 
+  font-family: "Muli", sans-serif; 
   margin: 10px 0;
 }
 
@@ -30,12 +30,13 @@ li{
 {% load static %}
 <img src = '{% static 'posts/mypic.JPG' %}' alt = '?'/>
 <div class = 'container'>
-  <div style class = 'row'>
+  <div class = 'row'>
     <div 'col-sm-4'>
 
       
       <h1>What I've learned since 23 June, 2017</h1>
     </div>
+    <div 'col-sm-8'></div>
   </div>
 </div>
   
@@ -46,16 +47,22 @@ li{
   <div class = 'container'>
     <div class = 'row'>
       <div class = 'col-sm-4'>
+      <h3>what I've learned</h3>
+      <hr>
       {% for i in post reversed  %}
       <li>{{ i }} -- {{ i.pub_date }}</li>
       {% endfor %}
       </div>
-      <div class = 'col-sm-7 pull-right'>
+      <div class = 'col-sm-1'>                 <!-- blank div -->
+      </div>
+      <div class = 'col-sm-3'>
         <h3>to-do:</h3>
+        <hr>
       {% for i in to_do_list %}
         <li>{{ i }}</li>
       {% endfor %}
-        </div>
+      </div>
+      <div class = 'col-sm-4'></div>           <!-- blank div -->
 
     </div>
   </div>
