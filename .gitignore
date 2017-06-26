@@ -1,5 +1,7 @@
 /venv/
-*swp
-*pyc
-
+*.swp
+*.pyc
+*.swo
+*.swm
+*.swn
 
